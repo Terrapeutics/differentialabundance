@@ -5,7 +5,7 @@ process SHINYNGS_STATICEXPLORATORY {
     conda "bioconda::r-shinyngs=1.5.6"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/r-shinyngs:1.5.6--r42hdfd78af_0':
-        'quay.io/biocontainers/r-shinyngs:1.5.6--r42hdfd78af_0' }"
+        '501439698750.dkr.ecr.us-east-1.amazonaws.com/terra-shinyngs' }"
 
     input:
     tuple val(meta), path(sample), path(feature_meta), path(assay_files)
